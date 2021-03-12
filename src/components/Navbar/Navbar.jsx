@@ -1,17 +1,6 @@
 import React from 'react';
 import s from './Navbar.module.css';
 
-/*let c1 = 'item';
-let c2 = 'active';
-
-let classes = c1 + " " + c2;
-let classesNew = '${s.item} ${s.active}';
-
-let classes = {
-   'nav': 'Navbar_nav__J6b4i ',
-   'item': 'Navbar_item__1qPqD'
-}*/
-
 const Navbar = () => {
    return <nav className={s.nav}>
       <div className ={s.item}>
@@ -40,3 +29,14 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+/*let c1 = 'item';
+let c2 = 'active';
+
+let classes = c1 + " " + c2;
+let classesNew = '${s.item} ${s.active}';
+
+let classes = {
+   'nav': 'Navbar_nav__J6b4i ',
+   'item': 'Navbar_item__1qPqD'
+}*/
