@@ -8,6 +8,16 @@
   color: #262324;
 }
 
+.dialog a{
+  text-decoration: none;
+  color: #262324;
+}
+
+.dialog a.active{
+  text-decoration: none;
+  color: #262324;
+}
+
 .dialogsItems .active {
    color: gold;
 }
