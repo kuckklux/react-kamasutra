@@ -7,7 +7,7 @@ import {rerenderEntireTree} from '../render'
       {id: 2, message: "Только что что?", likesCount: "15" },
       {id: 3, message: "Гранату, ясное дело." },
     ],
-    newPostText: '2ch.so'
+    newPostText: '2ch.so',
    },
 
    dialogsPage:{
@@ -21,6 +21,7 @@ import {rerenderEntireTree} from '../render'
       { id: 2, name: "shbmnk" },
       { id: 3, name: "fv" },
     ],
+    newMessageText: 'sup, /b/',
    },
 
    sideBar:{
@@ -39,8 +40,22 @@ export let addPost = () => {
   rerenderEntireTree(state)
 }
 
+export let addMessage = () => {
+  let newMessage = {
+    message: state.dialogsPage.newMessageText,
+  }
+  state.dialogsPage.messages.push(newMessage)
+  state.dialogsPage.newMessageText = ''
+  rerenderEntireTree(state)
+}
+
 export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
+  rerenderEntireTree(state)
+}
+
+export let updateNewMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
   rerenderEntireTree(state)
 }
 
