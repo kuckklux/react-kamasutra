@@ -6,16 +6,11 @@ import {rerenderEntireTree} from '../render'
       {id: 1, message: "Поздравляю, ТЫ ТОЛЬКО ЧТО ГРАНАТУ.", likesCount: "10" },
       {id: 2, message: "Только что что?", likesCount: "15" },
       {id: 3, message: "Гранату, ясное дело." },
-      {id: 4, message: "Что гранату?" },
-      {id: 5, message: "Только что." },
-      {id: 6, message: "Что только что?" },
-      {id: 7, message: "Гранату." },
-      {id: 8, message: "Что гранату?" },
-      {id: 9, message: "Только что." },
     ],
+    newPostText: '2ch.so'
    },
 
-   messagesPage:{
+   dialogsPage:{
      messages:[
       { message: "Братишка" },
       { message: "Я тебе покушать принес" },
@@ -33,13 +28,19 @@ import {rerenderEntireTree} from '../render'
    }
  }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: 0,
     id: 5,
   }
   state.profilePage.posts.push(newPost)
+  state.profilePage.newPostText = ''
+  rerenderEntireTree(state)
+}
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state)
 }
 
