@@ -5,11 +5,9 @@ const Post = (props) => {
   return (
     <div className={s.item}>
       <img src="https://sun1-87.userapi.com/s/v1/ig2/Yo4acC6nW0KUhnEHVIeRER7F1aeC3NDpVoqG3dkDJDBIxiYmnvrvwHbUCbn7qA6BjWDBjvQAfbtvAZZcXy5cRzRX.jpg?size=200x0&quality=96&crop=35,35,841,1009&ava=1" />
-      <span>{props.message}</span>
-      <span>
-        <div>like {props.likecounts}</div>
-      </span>
-      <span>dislike</span>
+      <span>{props.message}<br/>
+      <button>like {props.likecounts}</button><br/>
+      <button>dislike</button></span>
     </div>
   );
 };
