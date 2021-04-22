@@ -10,6 +10,11 @@
     grid-gap: 10px;
 }
 
+textarea {
+  background-color: #c2dbbaea;
+  border: none;
+}
+
 .app-wrapper-content {
   grid-area: c;
   background-color: #6c9e7bea;
