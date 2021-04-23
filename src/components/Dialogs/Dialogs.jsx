@@ -20,14 +20,15 @@ const Dialogs = (props) => {
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT', newText: text});
+    let action = { type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text };
+    props.dispatch(action);
   };
 
   return (
     <div className={s.dialogs}>
-   
-      {dialogsElements}
-      {messagesElements}
+      <div className={s.dialogsItems}>{dialogsElements}</div>
+
+      <div className={s.messages}>{messagesElements}</div>
 
       <div>
         <textarea
