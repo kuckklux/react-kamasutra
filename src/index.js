@@ -1,6 +1,5 @@
 import reportWebVitals from "./reportWebVitals";
-import store from "./Redux/state";
-
+import store from "./Redux/redux-store";
 import React from "react";
 import ReactDOM from "react-dom";
 import s from"./index.css";
@@ -23,4 +22,7 @@ _callSubscriber(store.getState());
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-store.subscribe(_callSubscriber);
+store.subscribe(()=>{
+  let state = store.getState()
+  _callSubscriber(state)
+});
