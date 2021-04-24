@@ -19,7 +19,7 @@ const App = (props) => {
           path="/profile"
           render={() => (
             <div className="app-wrapper-content-profile">
-              <Profile store={props.store} />
+              <Profile/>
             </div>
           )}
         />
@@ -27,7 +27,7 @@ const App = (props) => {
           path="/dialogs"
           render={() => (
             <div className="app-wrapper-content-dialogs">
-              <DialogsContainer store={props.store} />
+              <DialogsContainer/>
             </div>
           )}
         />
