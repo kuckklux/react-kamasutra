@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -19,10 +19,7 @@ const App = (props) => {
           path="/profile"
           render={() => (
             <div className="app-wrapper-content-profile">
-              <Profile
-                profilePage={props.state.profilePage}
-                dispatch={props.dispatch}
-              />
+              <Profile store={props.store} />
             </div>
           )}
         />
@@ -30,9 +27,7 @@ const App = (props) => {
           path="/dialogs"
           render={() => (
             <div className="app-wrapper-content-dialogs">
-              <Dialogs
-                store={props.store}
-              />
+              <DialogsContainer store={props.store} />
             </div>
           )}
         />
