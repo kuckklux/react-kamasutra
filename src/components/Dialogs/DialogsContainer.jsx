@@ -10,14 +10,13 @@ let mapStateToProps = (state) => {
     dialogsPage: state.dialogsPage,
   };
 };
-
 let mapDispatchToProps = (dispatch) => {
   return {
-    updateNewMessageText: () => {
-      dispatch(updateNewMessageTextCreator());
+    sendMessage: () => {
+      dispatch(sendMessageCreator());
     },
-    sendMessage: (text) => {
-      dispatch(sendMessageCreator(text));
+    updateNewMessageText: (text) => {
+      dispatch(updateNewMessageTextCreator(text));
     },
   };
 };
